@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="stylesheet" href="lib/mui/css/mui.css"/>
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/productlist.css"/>
+
+    <title>慢慢买-商品列表</title>
+</head>
+<body>
+<div class="container">
+    <div class="mmb_header"  >
+        <a  class="left" href="index.html" >
+            <img src="images/header_logo.png" alt=""/>
+        </a>
+        <a href="javascript:;" class="right">
+            <img src="images/header_app.png" alt="" />
+        </a>
+    </div>
+    <div class="mmb_search">
+        <button class='btn'>搜索</button>
+        <input type="text" class="search" placeholder="请输入搜索商品"/>
+
+    </div>
+    <div class="mmb_content">
+        <div class="nav">
+            <a href="index.html">首页&gt;</a>
+            <a href="category.html">全部分类&gt;</a>
+            <a href="#" class="categoryName"></a>
+            <a href="#" class="mui-btn mui-pull-right">筛选</a>
+        </div>
+        <ul class="mui-table-view">
+
+        </ul>
+        <!--分页-->
+        <div class="page">
+            <div class="left">
+                 <a href="javascript:;" class="prev">上一页</a>
+            </div>
+            <div  class="page-box">
+                <span class="mui-icon mui-icon-arrowdown"></span>
+                <select name="select" id="page" class="pageNum">
+
+                </select>
+            </div>
+          <div class="right">
+                <a href="javascript:;" class="next">下一页</a>
+          </div>
+        </div>
+    </div>
+    <div class="mmb_footer">
+        <div class="login">
+            <a href="javascript:;">登录</a>
+            <a href="javascript:;">注册</a>
+            <a href="javascript:;" class="btn-top">返回顶部</a>
+        </div>
+
+        <p>
+            <a href="javascript:;">手机APP下载</a>
+            <a href="javascript:;">慢慢买手机版</a>
+            -- 掌上比价平台
+
+        </p>
+        <h4>m.manmanbuy.com</h4>
+    </div>
+</div>
+<!--模板引擎-->
+<script type="text/html" id="tpl_list">
+
+    {{each result v i }}
+    <li class="mui-table-view-cell mui-media list">
+        <a href="product.html?productid={{v.productId}}&categoryId={{v.categoryId}}">
+            <div class="mui-media-object mui-pull-left img">
+                {{@ v.productImg }}
+            </div>
+            <div class="mui-media-body info ">
+                <P class="title">{{v.productName}}</P>
+                <p class="price">{{v.productPrice}}</p>
+                <p class=' other'>
+                    {{v.productQuote}}
+                    <span>{{v.productCom}}</span>
+                </p>
+
+            </div>
+        </a>
+    </li>
+
+    {{/each }}
+
+</script>
+<script type="text/html" id="tpl_select">
+    <%
+        for(var i = 0; i < totalCount/pagesize; i++) {
+    %>
+    <option value="{{i+1}}">{{i+1}}/3</option>
+   <%
+    }
+    %>
+</script>
+<script src="lib/zepto/zepto.min.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
+<script src="js/common.js"></script>
+<script src="js/productlist.js"></script>
+</body>
+</html>

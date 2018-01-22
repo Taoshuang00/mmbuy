@@ -1,0 +1,130 @@
+@charset "UTF-8";
+@import "variable";
+@import "adapter";
+
+.mmb_content {
+  background-color: #fff;
+}
+/*路径导航*/
+.nav {
+  background-color: @bgColor;
+  height: 80rem/50;
+  padding: 0 20rem/50;
+  color: #000;
+  line-height: 80rem/50;
+  a {
+    font-size: 24rem/50;
+  }
+  .mui-btn {
+    width: 120rem/50;
+    margin-top: 15rem/50;
+    border-radius: 10rem/50;
+    padding: 6rem/50 12rem/50;
+    background: linear-gradient(to top, #fff, #d7d7d7);
+    box-shadow: 2px 1px 1px rgba(0, 0, 0, .5);
+
+  }
+}
+\
+/*产品列表*/
+.list {
+  height: 240rem/50;
+  padding:20rem/50;
+  .img {
+    width: 200rem/50;
+    height: 200rem/50;
+    max-width: none;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  
+  .info {
+    padding-left: 10rem/50;
+    .title {
+      height: 100rem/50;
+      font-size: 24rem/50;
+      color: #000;
+      line-height: 45rem/50;
+      white-space: pre-wrap;
+      overflow: hidden;
+    }
+    .price {
+      color: red;
+      font-size: 30rem/50;
+      height: 50rem/50;
+      line-height: 30rem/50;
+    }
+    .other {
+        height: 50rem/50;
+        font-size: 24rem/50;
+    }
+  }
+
+}
+/* 分页 */
+
+/* 分页 */
+.page {
+  width: 100%;
+  height: 90rem/50;
+  padding-top: 20rem/50;
+  position: relative;
+  .left,
+  .right {
+    width: 33.3%;
+    position: absolute;
+    top: 20rem/50;
+    .prev,
+    .next {
+      height: 65rem/50;
+      width: 165rem/50;
+      background-color: #dadada;
+      font-size: 32rem/50;
+      text-align: center;
+      line-height:60rem/50 ;
+      border-radius: 10rem/50;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+  .left {
+    left: 0;
+  }
+  .right {
+    right: 0;
+  }
+
+  .page-box {
+    position: absolute;
+    height: 65rem/50;
+    width: 30%;
+    top: 20rem/50;
+    left: 33.3%;
+    .pageNum {
+      margin-bottom: 0;
+      margin-top: 0;
+      height: 100%;
+      width: 155rem/50;
+      font-size: 30rem/50;
+      border: 1px solid @bdColor !important;
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-color: transparent;
+    }
+    span {
+      display: block;
+      background-color: #dadada;
+      position: absolute;
+      top: 0;
+      font-size: 24rem/50;
+      width: 40rem/50;
+      border-radius: 0 5rem/50 5rem/50 0;
+      right: 0;
+      line-height:65rem/50 ;
+      text-align: center;
+    }
+  }
+}

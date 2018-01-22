@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="stylesheet" href="lib/mui/css/mui.css"/>
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/inlanddiscount.css"/>
+
+    <title>慢慢买-国内折扣</title>
+</head>
+<body>
+<div class="container">
+    <div class="mmb_header">
+        <a href="javascript:history.go(-1);" class="mui-icon mui-icon-arrowleft left go">
+        </a>
+        <h1>
+            国内折扣
+        </h1>
+        <a href="javascript:;" class="right">
+            <img src="images/header_app.png" alt="" />
+        </a>
+
+    </div>
+    <ul class="mmb_content clearfix">
+
+    </ul>
+    <div class="mmb_footer">
+        <div class="login">
+            <a href="javascript:;">登录</a>
+            <a href="javascript:;">注册</a>
+            <a href="javascript:;"   class="btn-top">返回顶部</a>
+        </div>
+
+        <p>
+            <a href="javascript:;">手机APP下载</a>
+            <a href="javascript:;">慢慢买手机版</a>
+            -- 掌上比价平台
+
+        </p>
+        <h4>m.manmanbuy.com</h4>
+    </div>
+</div>
+<!--模板引擎-->
+<script type="text/html" id = "tpl_con">
+
+    {{each result v i }}
+    <li ><a href="discount.html?productId={{v.productId}}" class="list">
+        {{@ v.productImg}}
+        <h4  class="mui-ellipsis-2">{{v.productName}}</h4>
+        <p>{{ v.productPrice}}</p>
+        <span>{{v.productFrom}}</span><span>{{v.productTime}}</span>
+    </a></li>
+    {{/each }}
+
+</script>
+
+
+<!--分页-->
+<script type="text/html" id="tpl_select">
+
+    <%
+    for(var i = 0; i < num; i++) {
+    %>
+    <option value="{{i+1}}">{{i+1}}/{{ num}}</option>
+    <%
+    }
+    %>
+</script>
+<script src="lib/zepto/zepto.min.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
+<script src="js/common.js"></script>
+<script src="js/inlanddiscount.js"></script>
+
+</body>
+</html>

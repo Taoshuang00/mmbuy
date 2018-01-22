@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="stylesheet" href="lib/mui/css/mui.css"/>
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/brandTitle.css"/>
+
+    <title>品牌大全</title>
+</head>
+<body>
+<div class="container">
+    <div class="mmb_header"  >
+        <a href="javascript:history.go(-1);" class="mui-icon mui-icon-arrowleft left go">
+        </a>
+        <h1>品牌大全</h1>
+        <a href="javascript:;" class="right">
+            <img src="images/header_app.png" alt="" />
+        </a>
+    </div>
+    <div class="mmb_search">
+        <button class='btn'>搜索</button>
+        <input type="text" class="search" placeholder="请输入搜索商品"/>
+
+    </div>
+    <div class="mmb_content">
+        <div class="nav">
+            <a href="index.html">首页&gt;</a>
+            <a href="javascript:;">品牌大全&gt;</a>
+        </div>
+        <div class="hot">
+            <a href="#" >热门品牌</a>
+        </div>
+        <ul class="mui-table-view ">
+
+        </ul>
+    </div>
+
+    <div class="mmb_footer">
+        <div class="login">
+            <a href="javascript:;">登录</a>
+            <a href="javascript:;">注册</a>
+            <a href="javascript:;" class="btn-top">返回顶部</a>
+        </div>
+
+        <p>
+            <a href="javascript:;">手机APP下载</a>
+            <a href="javascript:;">慢慢买手机版</a>
+            -- 掌上比价平台
+
+        </p>
+        <h4>m.manmanbuy.com</h4>
+    </div>
+</div>
+<!--模板引擎-->
+<script type="text/html" id = "tpl_title">
+
+    {{each result v i }}
+    <li class="mui-table-view-cell mui-collapse title" >
+        <a class="mui-navigate-right btn-title"  href="brand.html?brandTitleId={{v.brandTitleId}}&brandTitle={{v.brandTitle}}" >{{v.brandTitle}}</a>
+    </li>
+    {{/each }}
+
+</script>
+
+<script src="lib/zepto/zepto.min.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
+<script src="js/common.js"></script>
+<script src="js/brandTitle.js"></script>
+</body>
+</html>

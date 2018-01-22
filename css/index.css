@@ -1,0 +1,139 @@
+@charset "UTF-8";
+@media (min-width: 320px) {
+  html {
+    font-size: 21.33px;
+  }
+}
+@media (min-width: 400px) {
+  html {
+    font-size: 26.67px;
+  }
+}
+@media (min-width: 480px) {
+  html {
+    font-size: 32px;
+  }
+}
+@media (min-width: 600px) {
+  html {
+    font-size: 40px;
+  }
+}
+@media (min-width: 640px) {
+  html {
+    font-size: 42.67px;
+  }
+}
+@media (min-width: 720px) {
+  html {
+    font-size: 48px;
+  }
+}
+@media (min-width: 750px) {
+  html {
+    font-size: 50px;
+  }
+}
+/* 导航 */
+.mmb_nav {
+  margin-top: 0.4rem;
+  background-color: #fff;
+  width: 100%;
+  margin-bottom: 0.2rem;
+}
+.mmb_nav .nav {
+  padding-top: 1rem;
+}
+.mmb_nav .nav_show,
+.mmb_nav .nav_hide,
+.mmb_nav .nav_more {
+  float: left;
+  width: 25%;
+}
+.mmb_nav .nav_show a,
+.mmb_nav .nav_hide a,
+.mmb_nav .nav_more a {
+  width: 100%;
+  display: block;
+}
+.mmb_nav .nav_show a img,
+.mmb_nav .nav_hide a img,
+.mmb_nav .nav_more a img {
+  width: 2rem;
+  margin-left: 0.86rem;
+}
+.mmb_nav .nav_show a p,
+.mmb_nav .nav_hide a p,
+.mmb_nav .nav_more a p {
+  text-align: center;
+  font-size: 0.48rem;
+  color: #000;
+  height: 0.8rem;
+  margin-top: 0.3rem;
+}
+.mmb_nav .nav_hide {
+  display: none;
+}
+/* 超值推荐*/
+.title,
+.title-bottom {
+  height: 1.4rem;
+  width: 100%;
+  background-color: #ff841d;
+  padding: 0 0.4rem;
+}
+.title span,
+.title-bottom span {
+  font-size: 0.6rem;
+  color: #fff;
+  line-height: 1.4rem;
+}
+.title .img,
+.title-bottom .img {
+  width: 0.84rem;
+  height: 0.84rem;
+  float: right;
+  margin-top: 0.3rem;
+}
+.list {
+  height: 5.2rem;
+  padding: 0.6rem 0.4rem;
+}
+.list .img {
+  width: 4rem;
+  height: 4rem;
+  max-width: none;
+}
+.list .img img {
+  white-space: pre-wrap;
+}
+.list .info {
+  padding-left: 0.2rem;
+}
+.list .info .info-title {
+  height: 2.8rem;
+  font-size: 0.6rem;
+  color: #000;
+  line-height: 0.8rem;
+  white-space: pre-wrap;
+}
+.list .info .info-title span {
+  color: #ff841d;
+}
+.list .info .info-time {
+  font-size: 0.4rem;
+}
+.mmb_bar {
+  padding: 0.2rem;
+  height: 2rem;
+  background-color: #fff;
+  margin-bottom: 0.4rem;
+}
+.mmb_bar a {
+  margin-bottom: 0;
+  height: 1.6rem;
+  font-size: 0.6rem;
+}
+.title-bottom {
+  margin-bottom: 1rem;
+}

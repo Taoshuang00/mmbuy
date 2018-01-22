@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="stylesheet" href="lib/mui/css/mui.css"/>
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/product.css"/>
+
+    <title>慢慢买-商品详情</title>
+</head>
+<body>
+<div class="container">
+    <div class="mmb_header"  >
+        <a  class="left" href="index.html" >
+            <img src="images/header_logo.png" alt=""/>
+        </a>
+        <a href="javascript:;" class="right">
+            <img src="images/header_app.png" alt="" />
+        </a>
+    </div>
+    <div class="mmb_search">
+        <button class='btn'>搜索</button>
+        <input type="text" class="search" placeholder="请输入搜索商品"/>
+
+    </div>
+    <div class="mmb_content">
+        <div class="nav">
+            <a href="index.html">首页&gt;</a>
+            <a href="category.html">全部分类&gt;</a>
+            <a href="javascript:;" class="productlist"></a>
+            <a href="#" class="categoryName"></a>
+            <a href="#" class="mui-btn mui-pull-right">筛选</a>
+        </div>
+        <div class="product">
+
+        </div>
+        <ul class="product_nav mui-clearfix">
+            <li><a href="javascript:;" class="now">比价购买</a></li>
+            <li><a href="javascript:;">产品参数</a></li>
+            <li><a href="javascript:;">评价(2322)</a></li>
+        </ul>
+        <div class="product_buy">
+
+        </div>
+        <div class="note">
+            * 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。
+        </div>
+
+        <div class="comment">
+            <div class="com-title">网友评价</div>
+            <ul class="com-list">
+
+            </ul>
+            <div class="com-more">
+                <a href="javascript:;" class="mui-btn mui-btn-block">更多评论</a>
+            </div>
+
+        </div>
+    </div>
+    <div class="mmb_footer">
+        <div class="login">
+            <a href="javascript:;">登录</a>
+            <a href="javascript:;">注册</a>
+            <a href="javascript:;" class="btn-top">返回顶部</a>
+        </div>
+
+        <p>
+            <a href="javascript:;">手机APP下载</a>
+            <a href="javascript:;">慢慢买手机版</a>
+            -- 掌上比价平台
+
+        </p>
+        <h4>m.manmanbuy.com</h4>
+    </div>
+</div>
+<!--模板引擎-->
+<script type="text/html" id="tpl_product">
+
+    <h3 class="title"> {{productName}}</h3>
+    <div class="img">
+        {{@ productImg}}
+
+    </div>
+
+    <a href="javascript:;">
+        <img src="images/ic_pp.png" width="33" alt=""/>
+    </a>
+
+</script>
+<script type="text/html" id="tpl_com">
+    {{each result v i }}
+    <li>
+        <div class="mui-clearfix title" >
+            <p>{{ v.comName}}<span class="mui-pull-right">{{ v.comTime}}</span></p>
+            <span class="mui-pull-right">{{comFrom}}</span>
+        </div>
+        <div class="com-comment">
+           {{ v.comContent}}
+        </div>
+
+    </li>
+    {{/each}}
+</script>
+
+
+<script src="lib/zepto/zepto.min.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
+<script src="js/common.js"></script>
+<script src="js/product.js"></script>
+</body>
+</html>

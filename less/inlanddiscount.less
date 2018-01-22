@@ -1,0 +1,42 @@
+@charset "UTF-8";
+@import "adapter";
+@import "variable";
+.mmb_content {
+  width: 100%;
+  background-color: #fff !important;
+
+  li {
+    float: left;
+    width: 50%;
+    padding: 30rem/50;
+    border-bottom: 1px solid #ccc;
+  }
+  li:nth-child(2n) {
+    border-left: 1px solid #ccc;
+  }
+
+  .list {
+    display: block;
+    width: 100%;
+    img{
+      height: 300rem/50;
+    }
+    h4 {
+      line-height: 40rem/50;
+      font-size: 26rem/50;
+      margin-bottom: 20rem/50;
+    }
+    p {
+      line-height: 30rem/50;
+      font-size: 24rem/50;
+      height: 50rem/50;
+      color: @color;
+    }
+    span {
+      line-height: 40rem/50;
+      font-size: 24rem/50;
+      height: 50rem/50;
+      color: #666;
+    }
+  }
+}

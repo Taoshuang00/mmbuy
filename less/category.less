@@ -1,0 +1,50 @@
+@charset "UTF-8";
+@import "variable";
+@import "adapter";
+.mmb_content {
+  padding-bottom: 1rem;
+  background-color: #fff;
+  .title {
+    padding: 0;
+    .btn-title {
+      margin: 0;
+      padding:0 30rem/50 ;
+      line-height: 70rem/50;
+      background-color: #ededed;
+      border-radius: 5px;
+      border: 1px solid @bdColor;
+      width: 100%;
+      color: #000;
+      height: 80rem/50;
+      font-size: 32rem/50;
+    }
+    .info {
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      a{
+        float: left;
+        width: 33.3%;
+        height: 80rem/50;
+        text-align: center;
+        line-height: 80rem/50;
+        border-bottom: 1px solid @bdColor;
+        border-right: 1px solid @bdColor;
+        border-left: 1px solid @bdColor;
+        display: block;
+        font-size: 30rem/50;
+
+      }
+      a:nth-child(3n+1) {
+        border-right: none;
+      }
+      a:nth-child(3n) {
+        border-left: none;
+      }
+      a:last-child {
+        border-right: 1px solid @bdColor;
+      }
+    }
+  }
+
+}

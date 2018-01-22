@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="stylesheet" href="lib/mui/css/mui.css"/>
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/gsproduct.css"/>
+
+    <title>凑单品</title>
+</head>
+<body>
+<div class="container">
+    <div class="mmb_header">
+        <a href="javascript:history.go(-1);" class="mui-icon mui-icon-arrowleft left go">
+        </a>
+        <h1>
+            凑单品
+        </h1>
+        <a href="javascript:;" class="right">
+            <img src="images/header_app.png" alt=""/>
+        </a>
+
+    </div>
+    <div class="mmb_content clearfix">
+        <div class="bcj_nav">
+            <ul class="clearfix">
+                <li class="mui-icon">
+                    <select name="" id="shop">
+                    </select>
+                </li>
+                <li class="mui-icon">
+                    <select name="" id="area">
+
+                    </select>
+                </li>
+                <li class="mui-icon">
+                    <select name="" id="price">
+                        <option value="0">全部价格</option>
+                    </select>
+                </li>
+            </ul>
+            <div class="mui-icon mui-icon-search  search"></div>
+        </div>
+        <ul class="gsProduct">
+
+        </ul>
+    </div>
+    <div class="mmb_footer">
+        <div class="login">
+            <a href="javascript:;">登录</a>
+            <a href="javascript:;">注册</a>
+            <a href="javascript:;" class="btn-top">返回顶部</a>
+        </div>
+
+        <p>
+            <a href="javascript:;">手机APP下载</a>
+            <a href="javascript:;">慢慢买手机版</a>
+            -- 掌上比价平台
+
+        </p>
+        <h4>m.manmanbuy.com</h4>
+    </div>
+</div>
+<!--模板引擎-->
+<script type="text/html" id="tpl_shop">
+
+    {{each result v i }}
+    <option value="{{i}}">{{v.shopName}}</option>
+    {{/each }}
+
+</script>
+
+<script type="text/html" id="tpl_area">
+
+    {{each result v i }}
+    <option value="{{i}}">{{v.areaName.split("（")[0]}}</option>
+    {{/each }}
+
+</script>
+<script type="text/html" id="tpl_gsProduct">
+
+    {{each result v i }}
+    <li>
+        <a href="discount.html?productId={{v.productId}}" class="list">
+            <img src="{{ v.productImg}}" alt=""/>
+            <h4 class="mui-ellipsis">{{v.productName}}</h4>
+            <p class="mui-clearfix">{{ v.productPrice}}
+                <span class="mui-pull-right">去凑单</span>
+            </p>
+        </a>
+    </li>
+    {{/each }}
+
+</script>
+
+<script type="text/html" id="tpl_select">
+
+    <%
+    for(var i = 0; i < num; i++) {
+    %>
+    <option value="{{i+1}}">{{i+1}}/{{ num}}</option>
+    <%
+    }
+    %>
+</script>
+<script src="lib/zepto/zepto.min.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
+<script src="js/common.js"></script>
+<script src="js/gsproduct.js"></script>
+
+</body>
+</html>

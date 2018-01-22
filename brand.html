@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="stylesheet" href="lib/mui/css/mui.css"/>
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/brand.css"/>
+
+    <title>品牌大全</title>
+</head>
+<body>
+<div class="container">
+    <div class="mmb_header">
+        <a class="left" href="index.html">
+            <img src="images/header_logo.png" alt=""/>
+        </a>
+        <a href="javascript:;" class="right">
+            <img src="images/header_app.png" alt=""/>
+        </a>
+    </div>
+    <div class="mmb_search">
+        <button class='btn'>搜索</button>
+        <input type="text" class="search" placeholder="请输入搜索商品"/>
+
+    </div>
+    <div class="mmb_content">
+        <div class="nav">
+            <a href="index.html">首页&gt;</a>
+            <a href="brandTitle.html">品牌大全&gt;</a>
+            <a href="javascript:;" class="cate"></a>
+        </div>
+
+        <div class="brand">
+
+        </div>
+        <div class="sales">
+
+        </div>
+        <div class="comment">
+
+        </div>
+    </div>
+
+    <div class="mmb_footer">
+        <div class="login">
+            <a href="javascript:;">登录</a>
+            <a href="javascript:;">注册</a>
+            <a href="javascript:;" class="btn-top">返回顶部</a>
+        </div>
+
+        <p>
+            <a href="javascript:;">手机APP下载</a>
+            <a href="javascript:;">慢慢买手机版</a>
+            -- 掌上比价平台
+
+        </p>
+        <h4>m.manmanbuy.com</h4>
+    </div>
+</div>
+<!--模板引擎-->
+<!--品牌标题对应的十大品牌-->
+<script type="text/html" id="tpl_brand">
+    <div class="hot">
+        <a href="#">{{brandTitle}}那个牌子好</a>
+    </div>
+    <ul>
+        {{each result v i }}
+        <li class="brand_list  mui-icon" data-titleId="{{v.brandTitleId}}">
+            <a href="productlist.html?brandTitleId={{v.brandTitleId}}&categoryId={{v.categoryId}}">
+                <div class="icon">
+                    <span>{{i+1}}</span>
+                </div>
+                <div class="info">
+                    <h4>{{v.brandName}}</h4>
+                    <p>{{v.brandInfo}}</p>
+                </div>
+            </a>
+        </li>
+        {{/each }}
+    </ul>
+</script>
+
+<!--销量排行商品列表-->
+<script type="text/html" id="tpl_sales">
+    <div class="hot">
+        <a href="#">{{brandTitle}}产品销量排行</a>
+    </div>
+    <ul class="mui-table-view">
+        {{each result v i }}
+        <li class="mui-table-view-cell mui-media list" >
+            <a href="product.html?productid={{v.productId}}">
+                <div class="mui-media-object mui-pull-left img">
+                    {{@ v.productImg }}
+                </div>
+                <div class="mui-media-body info ">
+                    <P class="title">{{v.productName}}</P>
+                    <p class="price">{{v.productPrice}}</p>
+                    <p class=' other' data-id="{{ v.productId}}">
+                        {{v.productQuote}}
+                        <span class="btn_com">{{v.productCom}}</span>
+                    </p>
+
+                </div>
+            </a>
+        </li>
+
+        {{/each }}
+    </ul>
+    <div class="hot">
+        <a href="#">{{brandTitle}}最新评论</a>
+    </div>
+</script>
+
+
+<!--商品评论列表-->
+<script type="text/html" id="tpl_comment">
+
+    <ul class="mui-table-view">
+        {{each result v i }}
+        <li class="mui-table-view-cell mui-media list">
+            <a href="product.html?productid={{v.productId}}">
+                <div class="mui-media-object mui-pull-left img">
+                    {{@ product.productImg }}
+                </div>
+                <div class="mui-media-body info ">
+                    <P class="title title-c">{{product.productName}}</P>
+
+                </div>
+            </a>
+            <div class="com">
+                <div >
+                    <span class="user">{{v.comName}}:</span>
+                    <span class="mui-pull-right">{{v.comTime}}</span>
+                </div>
+                <div class="comContent">
+                    {{ v.comContent}}{{v.comFrom}}
+                </div>
+
+            </div>
+        </li>
+
+        {{/each }}
+    </ul>
+</script>
+
+<script src="lib/zepto/zepto.min.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
+<script src="js/common.js"></script>
+<script src="js/brand.js"></script>
+</body>
+</html>

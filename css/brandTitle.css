@@ -1,0 +1,108 @@
+@charset "UTF-8";
+@media (min-width: 320px) {
+  html {
+    font-size: 21.33px;
+  }
+}
+@media (min-width: 400px) {
+  html {
+    font-size: 26.67px;
+  }
+}
+@media (min-width: 480px) {
+  html {
+    font-size: 32px;
+  }
+}
+@media (min-width: 600px) {
+  html {
+    font-size: 40px;
+  }
+}
+@media (min-width: 640px) {
+  html {
+    font-size: 42.67px;
+  }
+}
+@media (min-width: 720px) {
+  html {
+    font-size: 48px;
+  }
+}
+@media (min-width: 750px) {
+  html {
+    font-size: 50px;
+  }
+}
+.mmb_content {
+  padding-bottom: 1rem;
+  background-color: #fff;
+  /*列表 导航*/
+}
+.mmb_content .title {
+  padding: 0;
+}
+.mmb_content .title .btn-title {
+  margin: 0;
+  padding: 0 0.6rem;
+  line-height: 1.4rem;
+  background-color: #ededed;
+  border-radius: 5px;
+  border: 1px solid #cccccc;
+  width: 100%;
+  color: #000;
+  height: 1.6rem;
+  font-size: 0.64rem;
+}
+.mmb_content .title .info {
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+.mmb_content .title .info a {
+  float: left;
+  width: 33.3%;
+  height: 1.6rem;
+  text-align: center;
+  line-height: 1.6rem;
+  border-bottom: 1px solid #cccccc;
+  border-right: 1px solid #cccccc;
+  border-left: 1px solid #cccccc;
+  display: block;
+  font-size: 0.6rem;
+}
+.mmb_content .title .info a:nth-child(3n+1) {
+  border-right: none;
+}
+.mmb_content .title .info a:nth-child(3n) {
+  border-left: none;
+}
+.mmb_content .title .info a:last-child {
+  border-right: 1px solid #cccccc;
+}
+/*路径导航*/
+.nav {
+  background-color: #ededed;
+  height: 1.6rem;
+  padding: 0 0.4rem;
+  color: #000;
+  line-height: 1.6rem;
+  border-top: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
+}
+.nav a {
+  font-size: 0.56rem;
+}
+.hot {
+  padding: 0.4rem 0.2rem;
+  font-size: 0.64rem;
+  width: 100%;
+}
+.hot a {
+  display: block;
+  width: 100%;
+  color: #cb8e31;
+  padding: 0.4rem;
+  background-color: #ededed;
+  border: 1px solid #cccccc;
+}

@@ -1,0 +1,131 @@
+@charset "UTF-8";
+@media (min-width: 320px) {
+  html {
+    font-size: 21.33px;
+  }
+}
+@media (min-width: 400px) {
+  html {
+    font-size: 26.67px;
+  }
+}
+@media (min-width: 480px) {
+  html {
+    font-size: 32px;
+  }
+}
+@media (min-width: 600px) {
+  html {
+    font-size: 40px;
+  }
+}
+@media (min-width: 640px) {
+  html {
+    font-size: 42.67px;
+  }
+}
+@media (min-width: 720px) {
+  html {
+    font-size: 48px;
+  }
+}
+@media (min-width: 750px) {
+  html {
+    font-size: 50px;
+  }
+}
+/*导航*/
+.bcj_nav {
+  position: relative;
+  height: 1.6rem;
+  width: 100%;
+  background-color: #fff;
+  overflow: hidden;
+  padding-right: 10%;
+}
+.bcj_nav ul {
+  height: 100%;
+}
+.bcj_nav li {
+  float: left;
+  height: 100%;
+  width: 30%;
+  position: relative;
+  margin-left: 0.3rem;
+  overflow: hidden;
+}
+.bcj_nav li select {
+  font-size: 0.64rem;
+  width: 100%;
+  height: 100%;
+  line-height: normal;
+  margin: 0;
+  padding: 0 0.6rem;
+}
+.bcj_nav li:after {
+  width: 0.6rem;
+  height: 100%;
+  content: '\e581';
+  display: block;
+  position: absolute;
+  line-height: 1.6rem;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.72rem;
+}
+.bcj_nav .search {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 10%;
+  height: 1.6rem;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.6rem;
+  background-color: #f1f1f1;
+}
+.gsProduct {
+  width: 100%;
+}
+.gsProduct li {
+  float: left;
+  width: 50%;
+  padding: 0.4rem;
+}
+.gsProduct li:nth-child(2n) {
+  padding-left: 0;
+}
+.gsProduct .list {
+  display: block;
+  width: 100%;
+  padding-bottom: 0.2rem;
+  background-color: #fff !important;
+}
+.gsProduct .list img {
+  height: 7rem;
+}
+.gsProduct .list h4 {
+  line-height: 0.8rem;
+  font-size: 0.52rem;
+  padding: 0 0.4rem;
+}
+.gsProduct .list p {
+  line-height: 1rem;
+  font-size: 0.72rem;
+  height: 1rem;
+  color: #ff841d;
+  padding: 0 0.4rem;
+}
+.gsProduct .list span {
+  width: 2.4rem;
+  height: 1rem;
+  margin-right: 0.4rem;
+  display: block;
+  text-align: center;
+  line-height: 1rem;
+  font-size: 0.56rem;
+  color: #fff;
+  background-color: #ff841d;
+  border-radius: 0.2rem;
+}
